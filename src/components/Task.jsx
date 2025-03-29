@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Task.css'
 
 export const Task = () => {
     const[tasks,setTasks]= useState([]);
@@ -36,18 +37,19 @@ export const Task = () => {
                 onChange={(e) => setDescription(e.target.value.trim())} 
                 />
 
-                <button>Add Task</button>
+                <button className='add'>Add Task</button>
 
             </form>
-            <div>
+            <div className='secondContainer'>
                 <div>
                     <button>All</button>
                     <button>Pending</button>
                     <button>Completed</button>
                 </div>
 
+
                 {tasks.map(task => (
-                    <div>
+                    <div className='boton2'>
                     <input type='checkbox' />
                     <h3>{task.title}</h3>
                     <p>{task.description}</p>
