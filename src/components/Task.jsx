@@ -13,7 +13,7 @@ export const Task = () => {
             id: Date.now(),
             title:title,
             description:description,
-            complete:false
+            completed:false
         };
 
         setTasks([...tasks, newTask]);
@@ -32,7 +32,7 @@ export const Task = () => {
                 onChange={(e) => setTitle(e.target.value.trim())} 
                  />
                 <textarea 
-                placeholder='descripcion'
+                placeholder='Descripción'
                 value={description}
                 onChange={(e) => setDescription(e.target.value.trim())} 
                 />
