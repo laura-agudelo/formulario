@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Task.css'
 import { TaskItem } from './TaskItem';
+import { contextTask } from '../context/contex';
 
 export const Task = () => {
     const[tasks,setTasks]= useState([]);
@@ -47,17 +48,6 @@ export const Task = () => {
                     <button>Pending</button>
                     <button>Completed</button>
                 </div>
-
-
-                {/* {tasks.map(task => (
-                    <div className='boton2'>
-                    <input type='checkbox' />
-                    <h3>{task.title}</h3>
-                    <p>{task.description}</p>
-                </div>
-                ))
-
-                } */}
 
                 {tasks.map(task => (
                     <TaskItem key={task.id} task={task} />

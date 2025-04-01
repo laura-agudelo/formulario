@@ -17,6 +17,7 @@ export const FormTask = () => {
             completed: false
         };
 
+    
         setTask([...tasks,newTask]);
 
     }
@@ -49,15 +50,6 @@ export const FormTask = () => {
                         </div>
 
 
-                        {/* {tasks.map(task => (
-                            <div className='boton2'>
-                                <input type='checkbox' />
-                                <h3>{task.title}</h3>
-                                <p>{task.description}</p>
-                            </div>
-                        ))
-
-                        } */}
 
                         {tasks.map(task => (
                         <TaskItem key={task.id} task={task} />
