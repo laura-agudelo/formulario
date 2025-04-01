@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { contextTask } from "../context/contex";
+import { TaskItem } from "./TaskItem";
 
 export const FormTask = () => {
 
@@ -48,7 +49,7 @@ export const FormTask = () => {
                         </div>
 
 
-                        {tasks.map(task => (
+                        {/* {tasks.map(task => (
                             <div className='boton2'>
                                 <input type='checkbox' />
                                 <h3>{task.title}</h3>
@@ -56,7 +57,11 @@ export const FormTask = () => {
                             </div>
                         ))
 
-                        }
+                        } */}
+
+                        {tasks.map(task => (
+                        <TaskItem key={task.id} task={task} />
+                    ))}
                     </div>
                 </section>
             </>
